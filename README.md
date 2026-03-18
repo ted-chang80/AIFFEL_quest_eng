@@ -1,14 +1,12 @@
-# 1. 깃허브 메인 화면을 장식할 텍스트를 커다란 주머니(readme_content)에 담습니다.
-readme_content = """# AIFFEL_quest_eng
+"""# AIFFEL_quest_eng
 
 - AIFFEL 과정 중 진행하는 프로젝트, 피어리뷰 등을 관리하는 Repository입니다.
 - 기본적인 틀을 제공하며, 파일이나 폴더를 수정/업로드하여 사용합니다.
 
----
+-----------------------------------------------------------------
 
 레포구조:
 
-```text
 AIFFEL_quest_eng
 ├── Computer_Vision
 │   ├── CV01
