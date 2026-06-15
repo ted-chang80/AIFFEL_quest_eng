@@ -9,11 +9,13 @@
 본 프로젝트는 캘리포니아 주택 가격 데이터를 바탕으로 학습된 PyTorch 모델을 웹 서비스 형태로 엔드투엔드(End-to-End) 배포한 결과물입니다. 백엔드 API 서버와 프론트엔드 대시보드를 독립적으로 구축하고 상호 연동을 검증했습니다.
 
 ### ① FastAPI 백엔드 서버 (Swagger UI) 확인
-![FastAPI 실행 화면](./images/fastapi_capture.png)
+<img width="1264" height="919" alt="스크린샷 2026-06-15 오후 4 44 25" src="https://github.com/user-attachments/assets/cd0e6b56-8818-4795-a41c-3e10a522f869" />
+
 * **설명**: `http://localhost:8000/docs` 경로의 Swagger UI에 접속하여 서버가 정상 작동함을 확인했습니다. Pydantic 스키마(`PredictRequest`)가 요구하는 8가지 주택 특성 데이터를 JSON 형태로 전송했을 때, 서버가 유효성 검증을 거쳐 정확한 예측 가격(`predicted_price`)을 성공적으로 반환하는 비동기 추론 파이프라인을 검증했습니다.
 
 ### ② Streamlit 프론트엔드 대시보드 화면 확인
-![Streamlit 실행 화면](./images/streamlit_capture.png)
+<img width="1274" height="783" alt="스크린샷 2026-06-15 오후 3 48 16" src="https://github.com/user-attachments/assets/cd11adba-adfc-4d4f-90e5-c9315c00a1fd" />
+
 * **설명**: 사용자가 직관적으로 주택 정보(소득 중앙값, 연식, 위도/경도 등)를 입력할 수 있는 웹 UI 인터페이스를 구축했습니다. 사용자가 '예측하기 🚀' 버튼을 누르면 내부적으로 FastAPI 서버의 `/predict` 엔드포인트와 통신하여, 계산된 결과값을 달러($) 포맷에 맞추어 화면에 초록색 성공 메시지로 안전하게 시각화해 줍니다.
 
 ---
